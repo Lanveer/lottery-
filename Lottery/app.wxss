@@ -1,0 +1,15 @@
+/**app.wxss**/
+
+
+.container {
+  width: 750rpx;
+  height: auto;
+  margin-bottom: 100rpx;
+} 
+
+text{
+  /*font-family: microsoft yahei;*/
+  font-family: sans-serif;
+}
+
+.empty{width:100%;height:94rpx;background:#fff;position:relative;}

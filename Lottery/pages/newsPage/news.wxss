@@ -1,0 +1,177 @@
+/* pages/newsPage/news.wxss */
+.container {
+  width: 750rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 86rpx;
+}
+
+.announcementView {
+    width: 720rpx;
+    height: auto;
+    background: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16rpx;
+}
+
+.announcementTitle {
+    font-size: 26rpx;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+
+.announcementContentView {
+    width: 690rpx;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcementContent {
+    font-size: 22rpx;
+    color: #353535;
+    margin-bottom: 32rpx;
+    width: 100%;
+    letter-spacing: 1rpx;
+    line-height: 150%;
+    text-indent: 47rpx;
+}
+
+.newsListContainer {
+    margin-bottom: 90rpx;
+}
+
+.newsListView {
+    width: 720rpx;
+    height: 180rpx;
+    border-bottom: 1rpx solid #DADADA;
+    display: flex;
+    flex-direction: column;
+}
+
+.newListContentView {
+    width: 690rpx;
+    height: 120rpx;
+    margin-top: 26rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.newListImage {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.newsListRightView {
+    width: 550rpx;
+    height: 120rpx;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+
+.newListTitle {
+    font-size: 26rpx;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 15rpx;
+}
+
+.newListContent {
+    font-size: 22rpx;
+    color: #A9A9A9;
+    margin-top: 16rpx;
+    line-height: 150%;
+}
+
+.newsTimeView {
+    width: 690rpx;
+    height: 20rpx;
+}
+
+.newsTimeText {
+    font-size: 18rpx;
+    color: #888888;
+    float: right;
+}
+
+.bottomBarView {
+  width: 750rpx;
+  height: 86rpx;
+  position: fixed;
+  bottom: -2rpx;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+}
+
+.leftBarView {
+  width: 375rpx;
+  height: 86rpx;
+  background: #FF9088;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightBarView {
+  width: 377rpx;
+  height: 86rpx;
+  background: #FF4C4C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftBarTitle {
+  font-size: 26rpx;
+  color: #FFFFFF;
+  margin: auto;
+}
+
+.rightBarTitle {
+  font-size: 26rpx;
+  color: #FFFFFF;
+  margin: auto;
+}
+
+.lotteryActionSheet {
+  width: 370rpx;
+  height: 300rpx;
+  position: fixed;
+  bottom: 86rpx;
+  left: 0rpx;
+}
+
+.actionSheetItem {
+  width: 370rpx;
+  height: 75rpx;
+  border-bottom: 1rpx solid #DADADA;
+  line-height: 75rpx;
+  text-align: center;
+  background: white;
+}
+
+.actionSheetItemSelected {
+  width: 370rpx;
+  height: 75rpx;
+  border-bottom: 1rpx solid #DADADA;
+  background: #FFF0F0;
+  line-height: 75rpx;
+  text-align: center;
+}
+
+.actionSheetTitle {
+  font-size: 24rpx;
+  color: #353535;
+}
+
+.actionSheetTitleSelected {
+  font-size: 24rpx;
+  color: #F53D3D;
+}

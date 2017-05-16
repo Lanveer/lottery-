@@ -1,0 +1,532 @@
+/**index.wxss**/
+
+.container {
+  width: 750rpx;
+  height: auto;
+  margin-bottom: 90rpx;
+} 
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.topTapBar {
+  width: 750rpx;
+  height: 86rpx;
+  background: #fafafa;
+  border-bottom: 1rpx solid #dadada;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: -2rpx;
+}
+
+.topBarItem {
+  width: 188rpx;
+  height: 86rpx;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topBarTitle {
+  font-size: 26rpx;
+  color: #353535;
+  margin: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.topBarTitleSelected {
+  font-size: 26rpx;
+  color: #ff4c4c;
+}
+
+.topBarItemLine {
+  background: #fafafa;
+  height: 5rpx;
+  width: 162rpx;
+}
+
+.topBarItemLineSelected {
+  background: #ff4c4c;
+  height: 5rpx;
+  width: 162rpx;
+}
+
+/**/
+
+.lotteryInfoView {
+  width: 750rpx;
+  height: 225rpx;
+  background: white;
+  border-bottom: 1rpx solid #dadada;
+  display: flex;
+  flex-direction: row;
+  margin-top: 86rpx;
+}
+
+.leftView {
+  width: 142rpx;
+  height: 225rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftImage {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 34rpx;
+}
+
+.rightView {
+  width: 608rpx;
+  height: 225rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.lotteryTitle {
+  font-size: 32rpx;
+  color: #353535;
+  font-weight: bold;
+  margin-top: 34rpx;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.latestIssueView {
+  width: 608rpx;
+  height: 30rpx;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blackText {
+  font-size: 22rpx;
+  color: #353535;
+}
+
+.greenText {
+  font-size: 22rpx;
+  color: #3fc4b0;
+}
+
+.grayText {
+  font-size: 22rpx;
+  color: #888;
+}
+
+.grayTextMargin {
+  margin-left: 26rpx;
+}
+
+.redText {
+  font-size: 22rpx;
+  color: #f53d3d;
+}
+
+.latestNumberImageView {
+  width: 608rpx;
+  height: 44rpx;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: -21rpx;
+}
+
+.latestNumberOpeningView {
+  width: 462rpx;
+  height: 44rpx;
+  background: #B2B2B2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 21rpx;
+  line-height: 44rpx;
+}
+
+.openingText {
+  font-size: 22rpx;
+  color: #FFFFFF;
+}
+
+.numberImage {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 8rpx;
+}
+
+.latestBallNumberImageView {
+  width: 350rpx;
+  height: 50rpx;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 28rpx;
+  margin-left: 60rpx;
+}
+
+.numberBallImage {
+  width: 50rpx;
+  height: 50rpx;
+  /*margin-right: 8rpx;*/
+}
+
+.lotteryTimeView {
+  width: 750rpx;
+  height: 234rpx;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lotteryTimeTitle {
+  width: 750rpx;
+  height: 80rpx;
+  background: #f8f8f8;
+}
+
+.lotteryTimeTitleText {
+  font-size: 26rpx;
+  color: #353535;
+  line-height: 80rpx;
+}
+
+.lotteryClockView {
+  width: 750rpx;
+  height: 110rpx;
+  /*display: flex;
+  flex-direction: row;*/
+  position: relative;
+}
+
+.lotteryClock {
+  width: 316rpx;
+  height: 110rpx;
+  background: #f8f8f8;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.lotteryClockLeft {
+  width: 140rpx;
+  height: 110rpx;
+  background: #42cfb9;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  line-height: 110rpx;
+}
+
+.lotteryClockLeftRed {
+  background: #f74d40;
+  width: 140rpx;
+  height: 110rpx;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  line-height: 110rpx;
+}
+
+.lotteryClockLeftUpper {
+  width: 140rpx;
+  height: 55rpx;
+  background: #3fc4b0;
+  position: absolute;
+  top: 0rpx;
+}
+
+.lotteryClockLeftUpperRed {
+  background: #E6483B;
+  width: 140rpx;
+  height: 55rpx;
+  position: absolute;
+  top: 0rpx;
+}
+
+.lotteryClockLeftText {
+  font-size: 80rpx;
+  color: white;
+  position: relative;
+  z-index: 11;
+}
+
+.lotteryClockMiddle {
+  width: 36rpx;
+  height: 110rpx;
+  background: #f8f8f8;
+  line-height: 110rpx;
+  text-align: center;
+}
+
+.lotteryClockMiddleText {
+  font-size: 40rpx;
+  color: #3fc4b0;
+}
+
+.lotteryClockMiddleTextRed {
+  color: #e6483b;
+  font-size: 40rpx;
+}
+
+.lotteryClockRight {
+  width: 140rpx;
+  height: 110rpx;
+  background: #42cfb9;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  line-height: 110rpx;
+}
+
+.lotteryClockRightRed {
+  background: #f74d40;
+  width: 140rpx;
+  height: 110rpx;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  line-height: 110rpx;
+}
+
+.lotteryClockRightText {
+  font-size: 80rpx;
+  color: white;
+  position: relative;
+  z-index: 11;
+}
+
+.lotteryClockRightUpper {
+  width: 140rpx;
+  height: 55rpx;
+  background: #3fc4b0;
+  position: absolute;
+  top: 0rpx;
+}
+
+.lotteryClockRightUpperRed {
+  width: 140rpx;
+  height: 55rpx;
+  position: absolute;
+  top: 0rpx;
+  background: #E6483B;
+}
+
+.lotterySound {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  right: 143rpx;
+  bottom: 33rpx;
+}
+
+.historyTitleView {
+  width: 750rpx;
+  height: 80rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historyContainer {
+  margin-bottom: 86rpx;
+  background: green;
+}
+
+.latest5HistoryTitleText {
+  font-size: 26rpx;
+  color: #353535;
+  line-height: 80rpx;
+  margin: auto;
+}
+
+.historyView {
+  width: 750rpx;
+  height: 110rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-top: 1rpx solid #dadada;
+}
+
+.historyIssueTitleView {
+  width: 700rpx;
+  height: 30rpx;
+}
+
+.historyIssueTitle {
+  font-size: 24rpx;
+  color: #888;
+  margin-top: 10rpx;
+  margin-left: 21rpx;
+}
+
+.historyIssueTitleMarginLeft {
+  margin-left: 25rpx;
+}
+
+.historyIssueNumberView {
+  width: 512rpx;
+  height: 44rpx;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+}
+
+.historyIssueNumberImage {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 8rpx;
+}
+
+.historyIssueBallNumberView {
+  width: 420rpx;
+  height: 50rpx;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.historyIssueBallNumberImage {
+  width: 50rpx;
+  height: 50rpx;
+  /*margin-right: 8rpx;*/
+}
+
+.contactView {
+  width: 750rpx;
+  height: 80rpx;
+  background: #f8f8f8;
+  /*margin-bottom: 86rpx;*/
+}
+
+.contactInfoView {
+  width: 260rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.contactTitle {
+  font-size: 22rpx;
+  color: #888;
+}
+
+.contactQQ {
+  font-size: 22rpx;
+  color: #2f8dbe;
+}
+
+.bottomBarView {
+  width: 750rpx;
+  height: 86rpx;
+  position: fixed;
+  bottom: -2rpx;
+  background: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBarView {
+  width: 375rpx;
+  height: 86rpx;
+  background: #ff9088;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightBarView {
+  width: 377rpx;
+  height: 86rpx;
+  background: #ff4c4c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftBarTitle {
+  font-size: 26rpx;
+  color: #fff;
+  margin: auto;
+}
+
+.rightBarTitle {
+  font-size: 26rpx;
+  color: #fff;
+  margin: auto;
+}
+
+.lotteryActionSheet {
+  width: 370rpx;
+  height: 300rpx;
+  position: fixed;
+  bottom: 86rpx;
+  left: 0rpx;
+}
+
+.actionSheetItem {
+  width: 370rpx;
+  height: 75rpx;
+  border-bottom: 1rpx solid #dadada;
+  line-height: 75rpx;
+  text-align: center;
+  background: white;
+}
+
+.actionSheetItemSelected {
+  width: 370rpx;
+  height: 75rpx;
+  border-bottom: 1rpx solid #dadada;
+  background: #fff0f0;
+  line-height: 75rpx;
+  text-align: center;
+}
+
+.actionSheetTitle {
+  font-size: 24rpx;
+  color: #353535;
+}
+
+.actionSheetTitleSelected {
+  font-size: 24rpx;
+  color: #f53d3d;
+}
+
+.empty {
+    height: 10rpx;
+}

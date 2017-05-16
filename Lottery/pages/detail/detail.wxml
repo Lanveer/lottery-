@@ -1,0 +1,28 @@
+<!--外层容器开始-->
+<view class="container" >
+    <view class="header">
+        <text class="title">最是江南好风景</text>
+        <text class="time">2017-1-17 12:42</text>    
+    </view>
+    <view class="body">
+        <image src="../../images/banner.png"></image>
+        <text class="detail">{{getInfo.content}}</text> 
+        <text class="detail-header">{{item.header_title}}</text>  
+        <text class="detail">{{getInfo.content}}</text>
+    </view>
+
+<view class="empty" wx:if="{{condition}}"></view>
+</view>
+<!--外层容器结束-->
+
+
+    <!--底部开始-->
+<view class="bottomBarView">
+  <view class="leftBarView" bindtap="leftBarClicked">
+    <text class="leftBarTitle">即时开奖</text>
+  </view>
+  <view class="rightBarView" bindtap="rightBarClicked">
+    <text class="rightBarTitle">时时彩动态</text>
+</view>
+  </view>
+  <!--底部结束-->

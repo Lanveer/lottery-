@@ -1,0 +1,42 @@
+
+<!--pages/newsPage/news.wxml-->
+<view class="container">
+  <view class="announcementView">
+    <text class="announcementTitle" bindtap="soundSwitch">公告</text>
+    <view class="announcementContentView">
+      <text class="announcementContent">{{pronounce}}</text>
+    </view>
+  </view>
+  <view class="newsListContainer">
+  <block wx:for="{{newsContent}}">
+    <view class="newsListView" bindtap="showNewsDetail" data-index="{{index}}" data-itemId="{{item.id}}">
+      <view class="newListContentView">
+        <image class="newListImage" src="{{item.imgurl}}"></image>
+        <view class="newsListRightView">
+          <text class="newListTitle">{{item.title}}</text>
+          <text class="newListContent">{{item.description}}</text>
+        </view>
+      </view>
+      <view class="newsTimeView">
+        <text class="newsTimeText">{{item.updatetime}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="lotteryActionSheet" wx:if="{{needShowActionSheet}}">
+    <block wx:for="{{topTabBarData}}">
+      <view class="{{item.didSelected ? 'actionSheetItemSelected' : 'actionSheetItem'}}" bindtap="actionSheetClicked" data-index="{{index}}">
+        <text class="{{item.didSelected ? 'actionSheetTitleSelected' : 'actionSheetTitle'}}">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="bottomBarView">
+    <view class="leftBarView" bindtap="leftBarClicked">
+      <text class="leftBarTitle">即时开奖</text>
+    </view>
+    <view class="rightBarView" bindtap="rightBarClicked">
+      <text class="rightBarTitle">时时彩动态</text>
+    </view>
+  </view>
+</view>

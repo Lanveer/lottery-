@@ -1,0 +1,218 @@
+
+<!--index.wxml-->
+
+<!--顶部四个按钮-->
+<view class="topTapBar">
+  <block wx:for="{{topTabBarData}}">
+    <view class="topBarItem" bindtap="topBarItemClicked" data-index="{{index}}">
+      <text class="topBarTitle {{item.didSelected ? 'topBarTitleSelected' : ''}}">{{item.title}}</text>
+      <view class="topBarItemLine {{item.didSelected ? 'topBarItemLineSelected' : ''}}"></view>
+    </view>
+  </block>
+</view>
+<view class="container">
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>
+
+  <!--北京赛车PK10 最新开奖号码，最新开奖期数等信息的view-->
+  <view wx:if="{{currentIndex == 0}}" class="lotteryInfoView">
+    <view class="leftView">
+      <image class="leftImage" src="{{imageURL}}"></image>
+    </view>
+    <view class="rightView">
+      <text class="lotteryTitle">北京赛车PK10</text>
+      <view class="latestIssueView">
+        <text class="blackText">最新开奖：</text>
+        <text class="greenText">{{webData[0].expect}}</text>
+        <text class="blackText">期</text>
+        <text class="grayText grayTextMargin">每日179期，今日剩余</text>
+        <text class="redText">{{lotteryPKRemain}}</text>
+        <text class="grayText ">期</text>
+      </view>
+
+      <!--wx:if="{{isOpeningLottery}}"-->
+      <view class="latestNumberImageView" wx:if="{{isOpeningLottery}}">
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[0]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[1]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[2]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[3]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[4]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[5]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[6]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[7]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[8]]}}"></image>
+        <image class="numberImage" src="{{fileMap[webData[0].opencode[9]]}}"></image>
+      </view>
+
+      <view wx:else class="latestNumberOpeningView">
+        <text class="openingText">{{didLotteryEnd ? lotteryEndText:lotteryStatueText}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!--其余三个时时彩最新开奖号码，最新开奖期数等信息的view-->
+  <view wx:if="{{currentIndex == 1}}" class="lotteryInfoView">
+    <view class="leftView">
+      <image class="leftImage" src="{{imageURL}}"></image>
+    </view>
+    <view class="rightView">
+      <text class="lotteryTitle">重庆时时彩</text>
+      <view class="latestIssueView">
+        <text class="blackText">最新开奖：</text>
+        <text class="greenText">{{currentCQExcept}}</text>
+        <text class="blackText">期</text>
+        <text class="grayText grayTextMargin">每日120期，今日剩余</text>
+        <text class="redText">{{lotteryCQRemain}}</text>
+        <text class="grayText">期</text>
+      </view>
+      <view class="latestBallNumberImageView" wx:if="{{isOpeningLottery}}">
+        <block wx:for="{{webData[0].opencode}}">
+          <image class="numberBallImage" src="{{fileMap[item]}}"></image>
+        </block>
+      </view>
+      <view wx:else class="latestNumberOpeningView">
+        <text class="openingText">{{didLotteryEnd ? lotteryEndText:lotteryStatueText}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{currentIndex == 2}}" class="lotteryInfoView">
+    <view class="leftView">
+      <image class="leftImage" src="{{imageURL}}"></image>
+    </view>
+    <view class="rightView">
+      <text class="lotteryTitle">新疆时时彩</text>
+      <view class="latestIssueView">
+        <text class="blackText">最新开奖：</text>
+        <text class="greenText">{{currentXJExcept}}</text>
+        <text class="blackText">期</text>
+        <text class="grayText grayTextMargin">每日96期，今日剩余</text>
+        <text class="redText">{{lotteryXJRemain}}</text>
+        <text class="grayText">期</text>
+      </view>
+      <view class="latestBallNumberImageView" wx:if="{{isOpeningLottery}}">
+        <block wx:for="{{webData[0].opencode}}">
+          <image class="numberBallImage" src="{{fileMap[item]}}"></image>
+        </block>
+      </view>
+      <view wx:else class="latestNumberOpeningView">
+        <text class="openingText">{{didLotteryEnd ? lotteryEndText:lotteryStatueText}}</text>
+      </view>
+    </view>
+    
+  </view>
+  <view wx:if="{{currentIndex == 3}}" class="lotteryInfoView">
+    <view class="leftView">
+      <image class="leftImage"src="{{imageURL}}"></image>
+    </view>
+    <view class="rightView">
+      <text class="lotteryTitle">天津时时彩</text>
+      <view class="latestIssueView">
+        <text class="blackText">最新开奖：</text>
+        <text class="greenText">{{currentTJExcept}}</text>
+        <text class="blackText">期</text>
+        <text class="grayText grayTextMargin ">每日84期，今日剩余</text>
+        <text class="redText">{{lotteryTJRemain}}</text>
+        <text class="grayText">期</text>
+      </view>
+      <view class="latestBallNumberImageView" wx:if="{{isOpeningLottery}}">
+        <block wx:for="{{webData[0].opencode}}">
+          <image class="numberBallImage" src="{{fileMap[item]}}"></image>
+        </block>
+      </view>
+      <view wx:else class="latestNumberOpeningView">
+        <text class="openingText">{{didLotteryEnd ? lotteryEndText:lotteryStatueText}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!--倒计时-->
+  <view class="lotteryTimeView">
+    <text class="lotteryTimeTitleText">距离下次开奖</text>
+    <view class="lotteryClockView">
+      <view class="lotteryClock">
+        <view class="{{didMeetCloseTime ? 'lotteryClockLeftRed' : 'lotteryClockLeft'}}">
+          <view class="{{didMeetCloseTime ? 'lotteryClockLeftUpperRed' : 'lotteryClockLeftUpper'}}"></view>
+          <text class="lotteryClockLeftText">{{minute}}</text>
+        </view>
+        <view class="lotteryClockMiddle">
+          <text class="{{didMeetCloseTime ? 'lotteryClockMiddleTextRed' : 'lotteryClockMiddleText'}}">:</text>
+        </view>
+        <view class="{{didMeetCloseTime ? 'lotteryClockRightRed' : 'lotteryClockRight'}}">
+          <view class="{{didMeetCloseTime ? 'lotteryClockRightUpperRed' : 'lotteryClockRightUpper'}}"></view>
+          <text class="lotteryClockRightText">{{second}}</text>
+        </view>
+      </view>
+      <image wx:if="{{isSoundOn}}" src="../../images/sound@2x.png" class="lotterySound" bindtap="soundSwitch">
+      </image>
+      <image wx:else src="../../images/soundclo@2x.png" class="lotterySound" bindtap="soundSwitch">
+      </image>
+    </view>
+  </view>
+
+  <!--倒计时结束-->
+
+  <!--开奖历史-->
+  <view class="historyTitleView">
+    <text class="latest5HistoryTitleText">最近5期开奖历史</text>
+  </view>
+  <view class="historyContainer">
+    <block wx:for="{{webData}}" wx:if="{{index <= 4}}">
+
+      <!--北京开奖历史-->
+      <view wx:if="{{isPK}}" class="historyView">
+        <text class="historyIssueTitle">第{{item.expect}}期</text>
+        <view class="historyIssueNumberView">
+
+          <block wx:for="{{item.opencode}} ">
+
+          <image class="historyIssueNumberImage " src="{{fileMap[item]}} "></image>
+          
+          </block>
+        </view>
+      </view>
+
+      <!--其余彩票开奖历史-->
+      <view wx:else class="historyView">
+        <view class="historyIssueTitleView">
+          <text class="historyIssueTitle">第{{item.expect}}期</text>
+          <text class="historyIssueTitle historyIssueTitleMarginLeft">{{item.dateTime}}</text>
+        </view>
+        <view class="historyIssueBallNumberView">
+          <block wx:for="{{item.opencode}}">
+            <image class="historyIssueBallNumberImage" src="{{fileMap[item]}}"></image>
+          </block>
+        </view>
+      </view>
+    </block>
+
+    <!--联系QQ-->
+    <view class="contactView">
+      <view class="contactInfoView">
+        <text class="contactTitle">联系作者QQ：</text>
+        <text class="contactQQ">702113541</text>
+      </view>
+    </view>
+  </view>
+
+  <!--即时开奖的菜单栏-->
+  <view class="lotteryActionSheet" wx:if="{{needShowActionSheet}}">
+    <block wx:for="{{topTabBarData}}">
+      <view class="{{item.didSelected ? 'actionSheetItemSelected' : 'actionSheetItem'}}" bindtap="actionSheetClicked" data-index="{{index}}">
+        <text class="{{item.didSelected ? 'actionSheetTitleSelected' : 'actionSheetTitle'}}">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="empty" wx:if="{{condition}}"></view>
+</view>
+
+<!--底部即时开奖和时时彩动态-->
+<view class="bottomBarView">
+  <view class="leftBarView" bindtap="leftBarClicked">
+    <text class="leftBarTitle">即时开奖</text>
+  </view>
+  <view class="rightBarView" bindtap="rightBarClicked">
+    <text class="rightBarTitle">时时彩动态</text>
+  </view>
+</view>
